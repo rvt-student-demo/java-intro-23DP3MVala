@@ -86,25 +86,21 @@ public class App
         // }
 
 
-        System.out.println("Give points [0-100]:");
-        int points = Integer.valueOf(input.nextLine());
+        System.out.println("Value of the gift?");
+        int value = Integer.valueOf(input.nextLine());
 
-        if (points < 0) {
-            System.out.println("Grade: impossible!");
-        } else if (points < 49) {
-            System.out.println("Grade: failed");
-        } else if (points < 59) {
-            System.out.println("Grade: 1");
-        } else if (points < 69) {
-            System.out.println("Grade: 2");
-        } else if (points < 79) {
-            System.out.println("Grade: 3");
-        } else if (points < 89) {
-            System.out.println("Grade: 4");
-        } else if (points <= 100) {
-            System.out.println("Grade: 5");
+        if (value >= 1000000) {
+            System.out.println("Tax: " + (142100 + (value - 1000000) * 0.17));
+        } else if (value >= 200000) {
+            System.out.println("Tax: " + (22100 + (value - 200000) * 0.15));
+        } else if (value >= 55000) {
+            System.out.println("Tax: " + (4700 + (value - 55000) * 0.12));
+        } else if (value >= 25000) {
+            System.out.println("Tax: " + (1700 + (value - 25000) * 0.1));
+        } else if (value >= 5000) {
+            System.out.println("Tax: " + (100 + (value - 5000) * 0.08));
         } else {
-            System.out.println("Grade: incredible!");
+            System.out.println("No tax!");
         }
 
     }
