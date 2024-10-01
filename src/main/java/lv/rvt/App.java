@@ -102,12 +102,15 @@ public class App
         // } else {
         //     System.out.println("No tax!");
         // }
-        int start = 0;
-        int end = Integer.valueOf(input.nextLine());
+        int sum = 0;
+        int n = Integer.valueOf(input.nextLine());
+        int i = 0;
 
-        for (int i = start; i < end+1; i++) {
-            System.out.println(i);
+        while (i < n+1) {
+            sum = sum + i;
+            i++;
         }  
+        System.out.println(sum);
 
     }
 
