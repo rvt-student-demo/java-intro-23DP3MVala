@@ -102,23 +102,13 @@ public class App
         // } else {
         //     System.out.println("No tax!");
         // }
-        int numbers = 0;
-        int sum = 0;
+        int start = 0;
+        int end = Integer.valueOf(input.nextLine());
 
-        while (true) {
-            System.out.println("Give a number:");
-            int number = Integer.valueOf(input.nextLine());
+        for (int i = start; i < end+1; i++) {
+            System.out.println(i);
+        }  
 
-            if (number == 0) {
-                System.out.println("Number of numbers: "+numbers);
-                System.out.println("Sum of the numbers: "+sum);
-                break;
-            }
-            if (!(number == 0)) {
-                numbers = numbers +1;
-                sum = sum + number;
-            }
-        }
     }
 
 }
