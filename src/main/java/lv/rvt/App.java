@@ -106,32 +106,45 @@ public class App
         // for( ; x<100;x+=10) {
         //     System.out.println(x);
         // }
-        int sum = 0;
-        int times = 0;
-        int even = 0;
-        int odd = 0;
-        System.out.println("Give numbers:");
-        int number = Integer.valueOf(input.nextLine());
-        while(!(number==-1)) {
-            sum += number;
-            times ++;
-            if (number %2==0){
-                even++;
-            } else {
-                odd++;
-            }
-            number = Integer.valueOf(input.nextLine());
-        }
-        if (number==-1){
-            System.out.println("Thx! Bye!");
-            System.out.println("Sum: "+sum);
-            System.out.println("Numbers: "+times);
-            double avg = (double)sum/times;
-            System.out.println("Average: "+avg);
-            System.out.println("Even: "+even);
-            System.out.println("Odd: "+odd);
-        }
+        // int sum = 0;
+        // int times = 0;
+        // int even = 0;
+        // int odd = 0;
+        // System.out.println("Give numbers:");
+        // int number = Integer.valueOf(input.nextLine());
+        // while(!(number==-1)) {
+        //     sum += number;
+        //     times ++;
+        //     if (number %2==0){
+        //         even++;
+        //     } else {
+        //         odd++;
+        //     }
+        //     number = Integer.valueOf(input.nextLine());
+        // }
+        // if (number==-1){
+        //     System.out.println("Thx! Bye!");
+        //     System.out.println("Sum: "+sum);
+        //     System.out.println("Numbers: "+times);
+        //     double avg = (double)sum/times;
+        //     System.out.println("Average: "+avg);
+        //     System.out.println("Even: "+even);
+        //     System.out.println("Odd: "+odd);
+        // }
 
+        System.out.println("Ievadi sākuma skaitli: ");
+        int a = Integer.valueOf(input.nextLine());
+        System.out.println("Ievadi beigu skaitli: ");
+        int b = Integer.valueOf(input.nextLine());
+        divisibleByThreeInRange(a, b);
     }
+    public static void divisibleByThreeInRange(int beginning, int end) {
+        for (int i = beginning; i <= end; i++) {
+            if (i %3 == 0) {
+                System.out.println(i);
+            }
+        };
+    }
+
 
 }
