@@ -132,19 +132,14 @@ public class App
         //     System.out.println("Odd: "+odd);
         // }
 
-        System.out.println("Ievadi sākuma skaitli: ");
-        int a = Integer.valueOf(input.nextLine());
-        System.out.println("Ievadi beigu skaitli: ");
-        int b = Integer.valueOf(input.nextLine());
-        divisibleByThreeInRange(a, b);
-    }
-    public static void divisibleByThreeInRange(int beginning, int end) {
-        for (int i = beginning; i <= end; i++) {
-            if (i %3 == 0) {
-                System.out.println(i);
-            }
-        };
-    }
+        // System.out.println("Ievadi sākuma skaitli: ");
+        // int a = Integer.valueOf(input.nextLine());
+        // System.out.println("Ievadi beigu skaitli: ");
+        // int b = Integer.valueOf(input.nextLine());
+        // divisibleByThreeInRange(a, b);
 
+        Stars.printTriangle(4);
+
+    }
 
 }
