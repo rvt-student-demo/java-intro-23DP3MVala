@@ -138,7 +138,9 @@ public class App
         // int b = Integer.valueOf(input.nextLine());
         // divisibleByThreeInRange(a, b);
 
-        Stars.printTriangle(4);
+        // Stars.printRightTriangle(4);
+        Stars.christmasTree(4);
+
 
     }
 
