@@ -1,6 +1,6 @@
 package lv.rvt;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class App 
 {
@@ -139,7 +139,21 @@ public class App
         // divisibleByThreeInRange(a, b);
 
         // Stars.printRightTriangle(4);
-        Stars.christmasTree(4);
+        // Stars.christmasTree(4);
+
+        ArrayList<String> elements = new ArrayList<>();
+        
+        while (true) {
+            String element = input.nextLine();
+
+            if (!(element == "")) {
+                elements.add(element);
+            }
+            else {
+                break;
+            }
+        }
+        System.out.println(elements.get(2));            
 
 
     }
