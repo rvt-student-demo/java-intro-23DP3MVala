@@ -141,19 +141,24 @@ public class App
         // Stars.printRightTriangle(4);
         // Stars.christmasTree(4);
 
-        ArrayList<String> elements = new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>();
         
         while (true) {
-            String element = input.nextLine();
+            int value = Integer.valueOf(input.nextLine());
 
-            if (!(element == "")) {
-                elements.add(element);
+            if (!(value == 0)) {
+                list.add(value);
             }
             else {
                 break;
             }
         }
-        System.out.println(elements.get(2));            
+
+        int sum = 0;
+        for ( int i = 0;i < list.size();i++) {
+            sum = sum + list.get(i);
+        }
+        System.out.println(sum);            
 
 
     }
