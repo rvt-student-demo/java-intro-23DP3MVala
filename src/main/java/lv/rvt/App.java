@@ -146,7 +146,7 @@ public class App
         while (true) {
             int value = Integer.valueOf(input.nextLine());
 
-            if (!(value == 0)) {
+            if (!(value == -1)) {
                 list.add(value);
             }
             else {
@@ -154,13 +154,22 @@ public class App
             }
         }
 
-        int sum = 0;
-        for ( int i = 0;i < list.size();i++) {
-            sum = list.get(1) + list.get(2);
-        }
-        System.out.println(sum);            
+        System.out.print("From where? ");
+        int min = Integer.valueOf(input.nextLine());
+        System.out.print("To where? ");
+        int max = Integer.valueOf(input.nextLine());
 
-
+        while(true) {
+            if (max <= list.size()) {
+                for (int a = min; a <= max; a++) {
+                    System.out.println(list.get(a));
+                }
+                break;
+            }
+            else {
+                break;
+            }
+        }            
     }
 
 }
