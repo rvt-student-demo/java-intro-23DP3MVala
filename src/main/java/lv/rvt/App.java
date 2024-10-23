@@ -156,7 +156,7 @@ public class App
 
         int sum = 0;
         for ( int i = 0;i < list.size();i++) {
-            sum = sum + list.get(i);
+            sum = list.get(1) + list.get(2);
         }
         System.out.println(sum);            
 
