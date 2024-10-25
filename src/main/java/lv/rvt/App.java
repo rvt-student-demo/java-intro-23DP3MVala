@@ -5,6 +5,7 @@ import java.util.*;
 public class App 
 {
     public static void main( String[] args )
+
     {
         // Make your first Hello World app!
         // System.out.println("Hello World!");
@@ -141,35 +142,59 @@ public class App
         // Stars.printRightTriangle(4);
         // Stars.christmasTree(4);
 
-        ArrayList<Integer> list = new ArrayList<>();
+        // ArrayList<Integer> list = new ArrayList<>();
         
-        while (true) {
-            int value = Integer.valueOf(input.nextLine());
+    //     while (true) {
+    //         int value = Integer.valueOf(input.nextLine());
 
-            if (!(value == -1)) {
-                list.add(value);
-            }
-            else {
-                break;
+    //         if (!(value == -1)) {
+    //             list.add(value);
+    //         }
+    //         else {
+    //             break;
+    //         }
+    //     }
+
+    //     System.out.print("From where? ");
+    //     int min = Integer.valueOf(input.nextLine());
+    //     System.out.print("To where? ");
+    //     int max = Integer.valueOf(input.nextLine());
+
+    //     while(true) {
+    //         if (max <= list.size()) {
+    //             for (int a = min; a <= max; a++) {
+    //                 System.out.println(list.get(a));
+    //             }
+    //             break;
+    //         }
+    //         else {
+    //             break;
+    //         }
+    //     }   
+    
+    ArrayList<Integer> list = new ArrayList<>();
+
+    list.add(3);
+    list.add(2);
+    list.add(6);
+    list.add(-1);
+    list.add(5);
+    list.add(1);
+
+        System.out.println("the numbers in the range [0, 5]");
+        printNumbersInRange(list, 0, 5);
+
+    }
+
+   
+    public static void printNumbersInRange(ArrayList<Integer> numbers, int lowerLimit, int upperLimit) {
+
+        for (int number: numbers) {
+            if (number >= lowerLimit && number<= upperLimit) {
+                System.out.println(number);
             }
         }
 
-        System.out.print("From where? ");
-        int min = Integer.valueOf(input.nextLine());
-        System.out.print("To where? ");
-        int max = Integer.valueOf(input.nextLine());
-
-        while(true) {
-            if (max <= list.size()) {
-                for (int a = min; a <= max; a++) {
-                    System.out.println(list.get(a));
-                }
-                break;
-            }
-            else {
-                break;
-            }
-        }            
     }
 
 }
