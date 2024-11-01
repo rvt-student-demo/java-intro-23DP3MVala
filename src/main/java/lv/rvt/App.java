@@ -171,30 +171,33 @@ public class App
     //             break;
     //         }
     //     }   
-    
-    ArrayList<Integer> list = new ArrayList<>();
+    int sum = 0;
+    int count = 0;
+    String vards = "";
 
-    list.add(3);
-    list.add(2);
-    list.add(6);
-    list.add(-1);
-    list.add(5);
-    list.add(1);
+    while(true) {
+        String dati = input.nextLine();
 
-        System.out.println("the numbers in the range [0, 5]");
-        printNumbersInRange(list, 0, 5);
-
-    }
-
-   
-    public static void printNumbersInRange(ArrayList<Integer> numbers, int lowerLimit, int upperLimit) {
-
-        for (int number: numbers) {
-            if (number >= lowerLimit && number<= upperLimit) {
-                System.out.println(number);
-            }
+        if (dati == "") {
+            break;
         }
 
+        String[] parts = dati.split(",");
+        sum = sum + Integer.valueOf(parts[1]);
+        count = count + 1;
+
+
+        if (parts.length == 2) {
+            String name = parts[0].trim();
+            
+            if (name.length() > vards. length()){
+                vards = name;
+            }
     }
 
+    }
+    System.out.println("Longest name: " + vards);
+    System.out.println("Average of the birth years: " + (1.0 * sum / count));
+
+}
 }
