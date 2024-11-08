@@ -172,8 +172,15 @@ public class App
     //         }
     //     }   
 
-    Product banana = new Product("Banana", 1.1, 13);
-    banana.printProduct();
+    DecreasingCounter counter = new DecreasingCounter(100);
+
+    counter.printValue();
+
+    counter.reset();
+    counter.printValue();
+
+    counter.decrement();
+    counter.printValue();
 
 }
 }
