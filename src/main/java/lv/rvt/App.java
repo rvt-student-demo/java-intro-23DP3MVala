@@ -171,33 +171,9 @@ public class App
     //             break;
     //         }
     //     }   
-    int sum = 0;
-    int count = 0;
-    String vards = "";
 
-    while(true) {
-        String dati = input.nextLine();
-
-        if (dati == "") {
-            break;
-        }
-
-        String[] parts = dati.split(",");
-        sum = sum + Integer.valueOf(parts[1]);
-        count = count + 1;
-
-
-        if (parts.length == 2) {
-            String name = parts[0].trim();
-            
-            if (name.length() > vards. length()){
-                vards = name;
-            }
-    }
-
-    }
-    System.out.println("Longest name: " + vards);
-    System.out.println("Average of the birth years: " + (1.0 * sum / count));
+    Product banana = new Product("Banana", 1.1, 13);
+    banana.printProduct();
 
 }
 }
