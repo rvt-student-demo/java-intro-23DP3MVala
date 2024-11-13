@@ -7,52 +7,7 @@ public class App
     public static void main( String[] args )
 
     {
-        // Make your first Hello World app!
-        // System.out.println("Hello World!");
-
-        // String name = "Marta";
-        // int age = 17;
-        // boolean isOnline = true;
-
-        // System.out.println(name);
-        // System.out.println(age);
-        // System.out.println(isOnline);
-
         Scanner input = new Scanner(System.in);
-
-        // String ievade = input.nextLine();
-        // System.out.println(ievade);
-
-        // System.out.println("Ievadi vārdu:");
-        // String name = input.nextLine();
-
-        // System.out.println("Ievdi uzvārdu:");
-        // String last = input.nextLine();
-
-        // System.out.println("Ievdi grupu:");
-        // String group = input.nextLine();
-
-        // System.out.println("Students: " + name + " " + last + ", grupa: " + group);
-
-
-        // int chicken = 9000;
-        // double bacon = 0.1;
-        // String tractor = "Zetor";
-
-        // System.out.println("Chicken:");
-        // System.out.println(chicken);
-        // System.out.println("Bacon (kg):");
-        // System.out.println(bacon);
-        // System.out.println("Tractor:");
-        // System.out.println(tractor);
-        // System.out.println();
-        // System.out.println("And finally" + ", a summary");
-        // System.out.println(chicken);
-        // System.out.println(bacon);
-        // System.out.println(tractor);
-
-
-
 
         // int number1 = Integer.valueOf(input.nextLine());
         // int number2 = Integer.valueOf(input.nextLine());
@@ -172,29 +127,9 @@ public class App
     //         }
     //     }   
 
-    Statistics statistics = new Statistics();
-    int even = 0;
-    int odd = 0;
-    System.out.println("Enter numbers:");
-    while (true) {
-        int a = Integer.valueOf(input.nextLine());
-        if (!(a ==-1)) {
-            statistics.addNumber(a);
-            if (a%2==0) {
-                even += a;
-            }
-            else {
-                odd += a;
-            }
-        }
-        else {
-            break;
-        }
-
-        
+    PaymentCard card = new PaymentCard(10);
+        System.out.println("Paul: " + card);
+        card.addMoney(-15);
+        System.out.println("Paul: " + card);
     }
-    System.out.println("Sum: " + statistics.sum());
-    System.out.println("Sum of even numbers: " + even);
-    System.out.println("Sum of odd numbers: " + odd);
-}
 }
