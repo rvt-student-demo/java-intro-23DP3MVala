@@ -172,15 +172,29 @@ public class App
     //         }
     //     }   
 
-    DecreasingCounter counter = new DecreasingCounter(100);
+    Statistics statistics = new Statistics();
+    int even = 0;
+    int odd = 0;
+    System.out.println("Enter numbers:");
+    while (true) {
+        int a = Integer.valueOf(input.nextLine());
+        if (!(a ==-1)) {
+            statistics.addNumber(a);
+            if (a%2==0) {
+                even += a;
+            }
+            else {
+                odd += a;
+            }
+        }
+        else {
+            break;
+        }
 
-    counter.printValue();
-
-    counter.reset();
-    counter.printValue();
-
-    counter.decrement();
-    counter.printValue();
-
+        
+    }
+    System.out.println("Sum: " + statistics.sum());
+    System.out.println("Sum of even numbers: " + even);
+    System.out.println("Sum of odd numbers: " + odd);
 }
 }
