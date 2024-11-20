@@ -9,15 +9,6 @@ public class App
     {
         Scanner input = new Scanner(System.in);
 
-        // int number1 = Integer.valueOf(input.nextLine());
-        // int number2 = Integer.valueOf(input.nextLine());
-
-        // System.out.println(number1 + number2);
-        // System.out.println(number1 * number2);
-        // System.out.println(number1 / number2);
-
-
-
         // System.out.println("Give the first number:");
         // int firstNumber = Integer.valueOf(input.nextLine());
 
@@ -127,9 +118,22 @@ public class App
     //         }
     //     }   
 
-    PaymentCard card = new PaymentCard(10);
-        System.out.println("Paul: " + card);
-        card.addMoney(-15);
-        System.out.println("Paul: " + card);
+    Books book = new Books();
+    while (true) {
+        System.out.print("Title: ");
+        String newBook = String.valueOf(input.nextLine());
+        if (!(newBook == "")) {
+            System.out.print("Pages: ");
+            int pg = Integer.valueOf(input.nextLine());
+            System.out.print("Publication year: ");
+            int yr = Integer.valueOf(input.nextLine());
+            Books.addNew(newBook,pg,yr);
+            break;
+        }
+        else {
+            break;
+        }
+    }
+        System.out.println();
     }
 }
