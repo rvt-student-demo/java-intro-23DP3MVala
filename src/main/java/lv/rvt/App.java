@@ -127,13 +127,24 @@ public class App
             int pg = Integer.valueOf(input.nextLine());
             System.out.print("Publication year: ");
             int yr = Integer.valueOf(input.nextLine());
-            Books.addNew(newBook,pg,yr);
-            break;
+            book.addNew(newBook,pg,yr);
         }
         else {
             break;
         }
     }
-        System.out.println();
+    System.out.println();
+
+    while (true) {
+        System.out.print("What information will be printed: ");
+        String izvele = String.valueOf(input.nextLine());
+        if (izvele.equals("everything")) {
+            book.Everything();
+        }
+        else {
+            book.onlyName();
+        }
+        break;
+    }
     }
 }
