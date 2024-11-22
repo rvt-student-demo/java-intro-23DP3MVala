@@ -118,33 +118,41 @@ public class App
     //         }
     //     }   
 
-    Books book = new Books();
-    while (true) {
-        System.out.print("Title: ");
-        String newBook = String.valueOf(input.nextLine());
-        if (!(newBook == "")) {
-            System.out.print("Pages: ");
-            int pg = Integer.valueOf(input.nextLine());
-            System.out.print("Publication year: ");
-            int yr = Integer.valueOf(input.nextLine());
-            book.addNew(newBook,pg,yr);
-        }
-        else {
-            break;
-        }
-    }
-    System.out.println();
+    // Books book = new Books();
+    // while (true) {
+    //     System.out.print("Title: ");
+    //     String newBook = String.valueOf(input.nextLine());
+    //     if (!(newBook == "")) {
+    //         System.out.print("Pages: ");
+    //         int pg = Integer.valueOf(input.nextLine());
+    //         System.out.print("Publication year: ");
+    //         int yr = Integer.valueOf(input.nextLine());
+    //         book.addNew(newBook,pg,yr);
+    //     }
+    //     else {
+    //         break;
+    //     }
+    // }
+    // System.out.println();
 
-    while (true) {
-        System.out.print("What information will be printed: ");
-        String izvele = String.valueOf(input.nextLine());
-        if (izvele.equals("everything")) {
-            book.Everything();
-        }
-        else {
-            book.onlyName();
-        }
-        break;
-    }
+    // while (true) {
+    //     System.out.print("What information will be printed: ");
+    //     String izvele = String.valueOf(input.nextLine());
+    //     if (izvele.equals("everything")) {
+    //         book.Everything();
+    //     }
+    //     else {
+    //         book.onlyName();
+    //     }
+    //     break;
+    // }
+
+    Product tapeMeasure = new Product("Tape measure");
+    Product plaster = new Product("Plaster", "home improvement section");
+    Product tyre = new Product("Tyre", 5);
+
+    System.out.println(tapeMeasure);
+    System.out.println(plaster);
+    System.out.println(tyre);
     }
 }
