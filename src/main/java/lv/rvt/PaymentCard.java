@@ -6,47 +6,25 @@ public class PaymentCard {
 
     private double balance;
 
-    public PaymentCard(double openingBalance) {
-        balance = openingBalance;
+    public PaymentCard(double balance) {
+        this.balance = balance;
     }
 
-    public String toString() {
-        return "The card has a balance of " + balance + " euros";
+    public double balance() {
+        return this.balance;
     }
 
-    public void eatAffordably() {
-        while (true) {
-            if (balance >= 2.6) {
-                balance -= 2.6;
-            }
-            else {
-                break;
-            }
+    public void addMoney(double increase) {
+        this.balance = this.balance + increase;
+    }
+
+    public boolean takeMoney(double amount) {
+        if (balance > amount) {
+            this.balance = this.balance - amount;
+            return true;
         }
-    }
-    
-    public void eatHeartily() {
-        while (true) {
-            if (balance >= 4.6) {
-                balance -= 4.6;
-            }
-            else {
-                break;
-            }
-        }
-    }
-
-    public void addMoney(double amount) {
-        while (true) {
-            if (amount > 0) {
-                if (balance+amount<=150 ) {
-                    balance += amount;
-                }
-                else {
-                    balance = 150;
-                }
-            }
-            break;
+        else {
+            return false;
         }
     }
 }
