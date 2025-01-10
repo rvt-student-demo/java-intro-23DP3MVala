@@ -9,23 +9,6 @@ public class App
     {
         Scanner input = new Scanner(System.in);
 
-        // System.out.println("Give the first number:");
-        // int firstNumber = Integer.valueOf(input.nextLine());
-
-        // System.out.println("Give the second number:");
-        // int secondNumber = Integer.valueOf(input.nextLine());
-
-        // double dvide = (double) firstNumber/secondNumber;
-        // double average = (double) (firstNumber+secondNumber)/2;
-
-        // System.out.println(firstNumber+" + "+secondNumber+" = "+(firstNumber+secondNumber));
-        // System.out.println(firstNumber+" - "+secondNumber+" = "+(firstNumber-secondNumber));
-        // System.out.println(firstNumber+" * "+secondNumber+" = "+(firstNumber*secondNumber));
-        // System.out.println(firstNumber+" / "+secondNumber+" = "+(dvide));
-        // System.out.println("Average = "+average);
-
-
-
         // System.out.println("Give speed:");
         // int speed = Integer.valueOf(input.nextLine());
         // if (speed>120) {
@@ -144,23 +127,11 @@ public class App
     //     else {
     //         book.onlyName();
 
-    PaymentTerminal unicafeExactum = new PaymentTerminal();
-    System.out.println(unicafeExactum);
+    Box box = new  Box( 2.5, 5.0, 6.0 ) ;
 
-    PaymentCard annesCard = new PaymentCard(2);
+    System.out.println( "Area: "  + box.area() + " volume: " + box. volume() );
 
-    System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
-
-    boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-    System.out.println("there was enough money: " + wasSuccessful);
-
-    unicafeExactum.addMoneyToCard(annesCard, 100);
-
-    wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-    System.out.println("there was enough money: " + wasSuccessful);
-
-    System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
-
-    System.out.println(unicafeExactum);
-    }
+    System.out.println( "length: " + box.length + " height: " + box. height +
+                        "width:  " + box.width )  ;
+   }
 }
