@@ -7,14 +7,7 @@ public class App
     public static void main( String[] args )
 
     {
-        Scanner input = new Scanner(System.in);
-
-        // System.out.println("Give speed:");
-        // int speed = Integer.valueOf(input.nextLine());
-        // if (speed>120) {
-        //     System.out.println("Speeding ticket!");
-        // }
-
+    Scanner input = new Scanner(System.in);
 
         // System.out.println("Value of the gift?");
         // int value = Integer.valueOf(input.nextLine());
@@ -127,11 +120,11 @@ public class App
     //     else {
     //         book.onlyName();
 
-    Box box = new  Box( 2.5, 5.0, 6.0 ) ;
+    Box box = new Box(2.5, 5.0, 6.0);
+    Box box1 = new Box(2.0, 4.0, 5.0);
 
-    System.out.println( "Area: "  + box.area() + " volume: " + box. volume() );
+    System.out.println(box1.nests(box));
 
-    System.out.println( "length: " + box.length + " height: " + box. height +
-                        "width:  " + box.width )  ;
+    System.out.println(box.smallerBox(box));
    }
 }
