@@ -119,12 +119,9 @@ public class App
     //     }
     //     else {
     //         book.onlyName();
-
-    Box box = new Box(2.5, 5.0, 6.0);
-    Box box1 = new Box(2.0, 4.0, 5.0);
-
-    System.out.println(box1.nests(box));
-
-    System.out.println(box.smallerBox(box));
+    Person ada = new Person("Ada Lovelace", "24 Maddox St. London W1S 2QN");
+    Person esko = new Person("Esko Ukkonen", "Mannerheimintie 15 00100 Helsinki");
+    System.out.println(ada);
+    System.out.println(esko);
    }
 }
