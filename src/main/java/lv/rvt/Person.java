@@ -10,6 +10,16 @@ public class Person {
     }
 
     public String getName() {
-        return this.name;
+        return name;
+    }
+
+    public String getAdress() {
+        return adress;
+    }
+
+    @Override
+    public String toString() {
+        return name + "\n" + " " + adress;
     }
 }
+
