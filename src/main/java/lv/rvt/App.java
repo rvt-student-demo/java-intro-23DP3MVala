@@ -1,30 +1,10 @@
 package lv.rvt;
 
-import java.util.*;
-
 public class App 
 {
     public static void main( String[] args )
 
     {
-    Scanner input = new Scanner(System.in);
-
-        // System.out.println("Value of the gift?");
-        // int value = Integer.valueOf(input.nextLine());
-
-        // if (value >= 1000000) {
-        //     System.out.println("Tax: " + (142100 + (value - 1000000) * 0.17));
-        // } else if (value >= 200000) {
-        //     System.out.println("Tax: " + (22100 + (value - 200000) * 0.15));
-        // } else if (value >= 55000) {
-        //     System.out.println("Tax: " + (4700 + (value - 55000) * 0.12));
-        // } else if (value >= 25000) {
-        //     System.out.println("Tax: " + (1700 + (value - 25000) * 0.1));
-        // } else if (value >= 5000) {
-        //     System.out.println("Tax: " + (100 + (value - 5000) * 0.08));
-        // } else {
-        //     System.out.println("No tax!");
-        // }
         // int x = 10;
         // for( ; x<100;x+=10) {
         //     System.out.println(x);
@@ -119,18 +99,11 @@ public class App
     //     }
     //     else {
     //         book.onlyName();
-    Teacher ada = new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200);
-    Teacher esko = new Teacher("Esko Ukkonen", "Mannerheimintie 15 00100 Helsinki", 5400);
-    System.out.println(ada);
-    System.out.println(esko);
+    ProductWarehouseWithHistory juice = new ProductWarehouseWithHistory("Juice", 1000.0, 1000.0);
+    juice.takeFromWarehouse(11.3);
+    juice.addToWarehouse(1.0);
+    //System.out.println(juice.history()); // [1000.0, 988.7, 989.7]
     
-    Student ollie = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
-    
-    int i = 0;
-    while (i < 25) {
-      ollie.study();
-      i = i + 1;
-    }
-    System.out.println(ollie);
+    juice.printAnalysis();
    }
 }
