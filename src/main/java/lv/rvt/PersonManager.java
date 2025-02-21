@@ -29,6 +29,6 @@ public class PersonManager {
     }
 
     public static void addPerson(Person person) throws Exception {
-        BufferedWriter writer = Helper.getWriter(null, null)
+        BufferedWriter writer = Helper.getWriter("personas.csv", null);
     }
 }
